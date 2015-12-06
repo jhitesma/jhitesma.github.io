@@ -20,6 +20,12 @@ $(document).ready(function() {
 								},
 								"targets": 5
 						},
+						{
+							"render": function (data, type, row) {
+									return moment(data);
+							},
+							"targets": 1
+						}
 				]
 				
 		} );
