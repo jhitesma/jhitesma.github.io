@@ -10,6 +10,7 @@ $(document).ready(function() {
 						{ "data": "tuneData.identification.tau" },
 						{ "data": "tuneData" }
 				],
+				"order": [[ 2, "desc" ]]
 				"columnDefs": [
 						{
 								// The `data` parameter refers to the data for the cell (defined by the
