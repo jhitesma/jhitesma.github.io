@@ -31,7 +31,8 @@ $(document).ready(function() {
 								return row[4] + ', ' + data;
 							},
 							"targets": 3
-						}
+						},
+						{ "visible" : false , "targets": [4]}
 				]
 				
 		} );
