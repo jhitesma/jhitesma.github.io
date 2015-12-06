@@ -29,7 +29,7 @@ $(document).ready(function() {
 						{
 							"render": function (data, type, row) {
 								return row[2] + ' ' + row[3];
-							}
+							},
 							"targets": 3
 						}
 				],
