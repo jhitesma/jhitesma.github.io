@@ -16,7 +16,7 @@ $(document).ready(function() {
 								// `data` option, which defaults to the column being worked with, in
 								// this case `data: 0`.
 								"render": function ( data, type, row ) {
-										return data*100 + ' ms';
+										return data*1000 + ' ms';
 								},
 								"targets": 5
 						},
