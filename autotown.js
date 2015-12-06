@@ -28,7 +28,7 @@ $(document).ready(function() {
 						},
 						{
 							"render": function (data, type, row) {
-								return row[4] + ', ' + row[3];
+								return row[4] + ', ' + data;
 							},
 							"targets": 3
 						}
