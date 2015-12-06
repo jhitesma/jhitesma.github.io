@@ -25,7 +25,7 @@ $(document).ready(function() {
 									return moment(data).format('lll');
 							},
 							"targets": 1
-						}
+						},
 						{
 							"render": function (data, type, row) {
 								return row.data.2 + ' ' + row.data.3;
