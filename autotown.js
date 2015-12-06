@@ -22,7 +22,7 @@ $(document).ready(function() {
 						},
 						{
 							"render": function (data, type, row) {
-									return moment(data);
+									return moment(data).format('lll');
 							},
 							"targets": 1
 						}
