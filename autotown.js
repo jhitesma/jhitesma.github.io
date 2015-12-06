@@ -25,6 +25,12 @@ $(document).ready(function() {
 									return moment(data).format('lll');
 							},
 							"targets": 1
+						},
+						{
+							"render": function (data, type, row) {
+								return row[4] + ', ' + row[3];
+							},
+							"targets": 3
 						}
 				]
 				
