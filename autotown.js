@@ -27,12 +27,13 @@ $(document).ready(function() {
 							"targets": 1
 						},
 						{
-							"render": function (data, type, row) {
-								return row[2] + ' ' + row[3];
+							"render": function (data, type,row) {
+								return data[3] . ', ' . data[4]
 							},
 							"targets": 3
 						}
-				],
+						
+				]
 				
 		} );
 } );
