@@ -9,6 +9,18 @@ $(document).ready(function() {
 						{ "data": "city" },
 						{ "data": "tuneData.identification.tau" },
 						{ "data": "tuneData" }
+				],
+				"columnDefs": [
+						{
+								// The `data` parameter refers to the data for the cell (defined by the
+								// `data` option, which defaults to the column being worked with, in
+								// this case `data: 0`.
+								"render": function ( data, type, row ) {
+										return data*100 + ' ms';
+								},
+								"targets": 5
+						},
 				]
+				
 		} );
 } );
