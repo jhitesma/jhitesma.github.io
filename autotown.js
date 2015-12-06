@@ -8,7 +8,6 @@ $(document).ready(function() {
 						{ "data": "region" },
 						{ "data": "city" },
 						{ "data": "tuneData.identification.tau" },
-						{ "data": "tuneData" }
 				],
 				"order": [[ 2, "desc" ]],
 				"columnDefs": [
@@ -27,7 +26,13 @@ $(document).ready(function() {
 							},
 							"targets": 1
 						}
-				]
+						{
+							"render": function (data, type, row) {
+								return row.data.2 + ' ' + row.data.3;
+							}
+							"targets": 3
+						}
+				],
 				
 		} );
 } );
