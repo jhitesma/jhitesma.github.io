@@ -33,6 +33,7 @@
 								<th>Country</th>
 								<th>Region</th>
 								<th>City</th>
+								<th>Tau</th>
 								<th>tuneData</th>
 						</tr>
 				</thead>
@@ -43,6 +44,7 @@
 								<th>Country</th>
 								<th>Region</th>
 								<th>City</th>
+								<th>Tau</th>
 								<th>tuneData</th>
 						</tr>
 				</tfoot>
@@ -54,22 +56,7 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js" ></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-					$('#example').DataTable( {
-							"ajax": "tunes.txt",
-							"columns": [
-									{ "data": "id" },
-									{ "data": "timestamp" },
-									{ "data": "country" },
-									{ "data": "region" },
-									{ "data": "city" },
-									{ "data": "tuneData" }
-							]
-					} );
-			} );
-		</script>
-
+		<script type="text/javascript" src="autotown.js"></script>
 	</body>
 </html>
 
