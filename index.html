@@ -1,34 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Bootstrap 101 Template</title>
 
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+		<!-- Bootstrap -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<h1>Hello, world!</h1>
+		<table id="example" class="display" cellspacing="0" width="100%">
+				<thead>
+						<tr>
+								<th>ID</th>
+								<th>Timestamp</th>
+								<th>Country</th>
+								<th>Region</th>
+								<th>City</th>
+								<th>tuneData</th>
+						</tr>
+				</thead>
+				<tfoot>
+						<tr>
+								<th>ID</th>
+								<th>Timestamp</th>
+								<th>Country</th>
+								<th>Region</th>
+								<th>City</th>
+								<th>tuneData</th>
+						</tr>
+				</tfoot>
+		</table>
 
-  </body>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+					$('#example').DataTable( {
+							"ajax": "tunes.txt",
+							"columns": [
+									{ "data": "id" },
+									{ "data": "timestamp" },
+									{ "data": "country" },
+									{ "data": "region" },
+									{ "data": "city" },
+									{ "data": "tuneData" }
+							]
+					} );
+			} );
+		</script>
+
+	</body>
 </html>
+
+<!--
+{"id":"1",
+"timestamp":"2015-12-02T23:33:39.074517Z",
+"addr":"111.69.113.69",
+"country":"NZ",
+"region":"stl",
+"city":"invercargill",
+"lat":-46.413187,
+"lon":168.353773,
+"tuneData":{"dataVersion":1,
+"identification":{"pitch":{"bias":-0.041178399999999997,
+"gain":9.0118799999999997,
+"noise":139.03700000000001},
+"roll":{"bias":0.0073014200000000003,
+"gain":9.3093800000000009,
+"noise":151.97},
+"tau":0.028000000000000001},
+"tuning":{"computed":{"derivativeCutoff":18,
+"gains":{"outer":{"kp":5.3632600000000004},
+"pitch":{"kd":6.4892699999999996e-05,
+"ki":0.0096096500000000008,
+"kp":0.0032906699999999999},
+"roll":{"kd":4.8193899999999999e-05,
+"ki":0.0071367999999999996,
+"kp":0.0024438799999999998}},
+"naturalFrequency":5.7999999999999998},
+"parameters":{"damping":1.1000000000000001,
+"noiseSensitivity":0}},
+"uniqueId":"2f0037000157325237313620",
+"userObservations":"icee's new tune works well on sparky",
+"vehicle":{"batteryCells":3,
+"esc":"RG12",
+"firmware":{"board":"Sparky",
+"commit":"1b66659e",
+"date":"2015-12-01T18:02:00Z",
+"tag":"mpl-autotunebuffering"},
+"motor":"Cobra 2204 1960kv",
+"size":250,
+"type":"QuadX",
+"weight":0}}}
+-->
