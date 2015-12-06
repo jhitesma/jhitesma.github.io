@@ -25,14 +25,7 @@ $(document).ready(function() {
 									return moment(data).format('lll');
 							},
 							"targets": 1
-						},
-						{
-							"render": function (data, type,row) {
-								return data[3] . ', ' . data[4]
-							},
-							"targets": 3
 						}
-						
 				]
 				
 		} );
